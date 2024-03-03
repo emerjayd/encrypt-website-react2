@@ -1,0 +1,22 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-encryptwebsitereact2-dev-140117-authRole",
+      "UnauthRoleArn": "arn:aws:iam::157683884713:role/amplify-encryptwebsitereact2-dev-140117-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::157683884713:role/amplify-encryptwebsitereact2-dev-140117-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-encryptwebsitereact2-dev-140117-deployment",
+      "UnauthRoleName": "amplify-encryptwebsitereact2-dev-140117-unauthRole",
+      "StackName": "amplify-encryptwebsitereact2-dev-140117",
+      "StackId": "arn:aws:cloudformation:us-west-2:157683884713:stack/amplify-encryptwebsitereact2-dev-140117/83973340-d966-11ee-a8f8-069648156309",
+      "AmplifyAppId": "dmoc7ub32wbqv"
+    },
+    "categories": {
+      "function": {
+        "contactformuploader": {
+          "sesEmail": "sudo.encrypt@gmail.com"
+        }
+      }
+    }
+  }
+}
