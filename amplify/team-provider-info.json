@@ -14,8 +14,13 @@
     "categories": {
       "function": {
         "contactformuploader": {
-          "sesEmail": "sudo.encrypt@gmail.com"
+          "sesEmail": "sudo.encrypt@gmail.com",
+          "deploymentBucketName": "amplify-encryptwebsitereact2-dev-140117-deployment",
+          "s3Key": "amplify-builds/contactformuploader-314b6741455946314756-build.zip"
         }
+      },
+      "api": {
+        "encryptwebsitereact2": {}
       }
     }
   }
