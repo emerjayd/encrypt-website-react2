@@ -8,7 +8,30 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [comment, setComment] = useState("");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
+    const formData = {
+      name,
+      email,
+      phoneNumber,
+      comment,
+    };
+
+    // Example POST method implementation:
+    const endpoint = "YOUR_LAMBDA_ENDPOINT"; // Replace with your actual endpoint
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const responseBody = await response.json();
+    console.log(responseBody);
+    // Implement your response handling logic here
+  };
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-center text-3xl font-bold mb-6 text-white">
@@ -30,7 +53,7 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="input"
             placeholder="Name"
             required
             value={name}
@@ -41,7 +64,7 @@ const Contact = () => {
           <input
             type="email"
             name="email"
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="input"
             placeholder="Email"
             required
             value={email}
@@ -52,7 +75,7 @@ const Contact = () => {
           <input
             type="text"
             name="phoneNumber"
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="input"
             placeholder="Phone number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
@@ -62,17 +85,14 @@ const Contact = () => {
           <textarea
             name="message"
             placeholder="Comment"
-            className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="custom-textarea"
             rows={4}
             required
             value={comment}
             onChange={(e) => setComment(e.target.value)}
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="shadow bg-black hover:bg-gray-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded w-full"
-        >
+        <button type="submit" className="custom-submit-button">
           Send
         </button>
       </form>

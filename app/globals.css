@@ -77,3 +77,40 @@ main
     /* Firefox */
   }
 }
+
+/* Input styles */
+.input
+{
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+/* global.css */
+
+/* Example of a custom class that combines several Tailwind utility classes */
+.custom-textarea
+{
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight;
+}
+
+.custom-textarea:focus
+{
+  @apply outline-none bg-white border-gray-500;
+}
+
+/* In your global.css or similar file */
+
+.custom-submit-button
+{
+  @apply shadow bg-black text-white font-bold py-2 px-4 rounded w-full;
+}
+
+.custom-submit-button:hover
+{
+  @apply bg-gray-700;
+}
+
+.custom-submit-button:focus
+{
+  @apply shadow-md outline-none;
+  /* Example replacement with shadow-md */
+}

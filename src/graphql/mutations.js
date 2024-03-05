@@ -1,48 +1,11 @@
-/* eslint-disable */
-// this is an auto generated file. This will be overwritten
+import gql from "graphql-tag"; // Or the modern equivalent from @apollo/client
 
-export const createCandidate = /* GraphQL */ `
-  mutation CreateCandidate(
-    $input: CreateCandidateInput!
-    $condition: ModelCandidateConditionInput
-  ) {
-    createCandidate(input: $input, condition: $condition) {
-      id
-      name
-      email
-      createdAt
-      updatedAt
-      __typename
+const submitContactForm = gql`
+  mutation submitContactForm($input: SubmitContactFormInput!) {
+    submitContactForm(input: $input) {
+      message
     }
   }
 `;
-export const updateCandidate = /* GraphQL */ `
-  mutation UpdateCandidate(
-    $input: UpdateCandidateInput!
-    $condition: ModelCandidateConditionInput
-  ) {
-    updateCandidate(input: $input, condition: $condition) {
-      id
-      name
-      email
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
-export const deleteCandidate = /* GraphQL */ `
-  mutation DeleteCandidate(
-    $input: DeleteCandidateInput!
-    $condition: ModelCandidateConditionInput
-  ) {
-    deleteCandidate(input: $input, condition: $condition) {
-      id
-      name
-      email
-      createdAt
-      updatedAt
-      __typename
-    }
-  }
-`;
+
+export default submitContactForm;
